@@ -41,3 +41,6 @@
 > flare-tag-data<br>
 > flare-tag-domain<br>
 > flare-tag-service<br>
+
+### 构建方式
+flare-parent工程下执行mvn clean install或mvn clean package
