@@ -1,0 +1,45 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>org.sanpao</groupId>
+	<artifactId>flare-parent</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+	<name>flare-parent</name>
+	<url>http://maven.apache.org</url>
+
+	<modules>
+		<module>../flare-dependencies</module>
+		<module>../flare-util</module>
+		<module>../flare-common</module>
+		<module>../flare-domain</module>
+		<module>../flare-advertisement-api</module>
+		<module>../flare-advertisement-data</module>
+		<module>../flare-advertisement-domain</module>
+		<module>../flare-advertisement-service</module>
+		<module>../flare-identity-api</module>
+		<module>../flare-identity-data</module>
+		<module>../flare-identity-domain</module>
+		<module>../flare-identity-service</module>
+		<module>../flare-order-api</module>
+		<module>../flare-order-data</module>
+		<module>../flare-order-domain</module>
+		<module>../flare-order-service</module>
+		<module>../flare-payment-api</module>
+		<module>../flare-payment-data</module>
+		<module>../flare-payment-domain</module>
+		<module>../flare-payment-service</module>
+		<module>../flare-reputation-api</module>
+		<module>../flare-reputation-data</module>
+		<module>../flare-reputation-domain</module>
+		<module>../flare-reputation-service</module>
+		<module>../flare-tag-api</module>
+		<module>../flare-tag-data</module>
+		<module>../flare-tag-domain</module>
+		<module>../flare-tag-service</module>
+		<module>../flare-service-boot</module>
+		<module>../flare-api-gateway</module>
+	</modules>
+</project>
