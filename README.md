@@ -1,6 +1,6 @@
 # flare
-1.服务主工程\\
-flare-service-boot\\
+1.服务主工程 \\ 
+flare-service-boot \\ 
 
 2.应用接口网关\\
 flare-api-gateway\\
