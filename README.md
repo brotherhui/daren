@@ -43,4 +43,4 @@
 > flare-tag-service<br>
 
 ### 构建方式
-flare-parent工程下执行mvn clean install或mvn clean package
+> flare-parent工程下执行 mvn clean install 或 mvn clean package
