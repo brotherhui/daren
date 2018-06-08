@@ -1,11 +1,11 @@
 # flare
-1.服务主工程
+### 1.服务主工程
 > flare-service-boot
 
-2.应用接口网关
+### 2.应用接口网关
 > flare-api-gateway
 
-3.微服务
+### 3.微服务
 - 广告
 > flare-advertisement-api<br>
 > flare-advertisement-data<br>
