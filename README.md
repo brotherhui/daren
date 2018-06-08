@@ -44,3 +44,8 @@
 
 ### 4.构建方式
 > flare-parent工程下执行 mvn clean install 或 mvn clean package
+
+### 5.运行方式
+> 分别启动 flare-service-boot 和 flare-api-gateway
+> postman以post方式访问http://...:50000/query/{xxx}
+> postman以post方式访问http://...:50000/command{xxx}
