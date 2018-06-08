@@ -49,3 +49,5 @@
 > 分别启动 flare-service-boot 和 flare-api-gateway<br>
 > postman以post方式访问http://localhost:50000/query/xxx<br>
 > postman以post方式访问http://localhost:50000/command/xxx<br>
+> postman以post方式访问http://localhost:50000/auth/query/xxx<br>
+> postman以post方式访问http://localhost:50000/auth/command/xxx<br>
