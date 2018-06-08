@@ -1,8 +1,8 @@
 # flare
-### 1.主工程
+### 1.聚合服务
 > flare-service-boot
 
-### 2.网关
+### 2.API网关
 > flare-api-gateway
 
 ### 3.微服务
