@@ -6,38 +6,38 @@
 > flare-api-gateway
 
 3.微服务
-(1).广告
-> flare-advertisement-api
-> flare-advertisement-data
-> flare-advertisement-domain
-> flare-advertisement-service
+- 广告
+> flare-advertisement-api<br>
+> flare-advertisement-data<br>
+> flare-advertisement-domain<br>
+> flare-advertisement-service<br>
 
-(2).身份
-> flare-identity-api
-> flare-identity-data
-> flare-identity-domain
-> flare-identity-service
+- 身份
+> flare-identity-api<br>
+> flare-identity-data<br>
+> flare-identity-domain<br>
+> flare-identity-service<br>
 
-(3).订单
-> flare-order-api
-> flare-order-data
-> flare-order-domain
-> flare-order-service
+- 订单
+> flare-order-api<br>
+> flare-order-data<br>
+> flare-order-domain<br>
+> flare-order-service<br>
 
-(4).支付
-> flare-payment-api
-> flare-payment-data
-> flare-payment-domain
-> flare-payment-service
+- 支付
+> flare-payment-api<br>
+> flare-payment-data<br>
+> flare-payment-domain<br>
+> flare-payment-service<br>
 
-(5).声誉
-> flare-reputation-api
-> flare-reputation-data
-> flare-reputation-domain
-> flare-reputation-service
+- 声誉
+> flare-reputation-api<br>
+> flare-reputation-data<br>
+> flare-reputation-domain<br>
+> flare-reputation-service<br>
 
-(6).标签
-> flare-tag-api
-> flare-tag-data
-> flare-tag-domain
-> flare-tag-service
+- 标签
+> flare-tag-api<br>
+> flare-tag-data<br>
+> flare-tag-domain<br>
+> flare-tag-service<br>
