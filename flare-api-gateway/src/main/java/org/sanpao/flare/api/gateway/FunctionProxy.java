@@ -41,8 +41,8 @@ public class FunctionProxy implements InitializingBean {
 		nameValuePairs.stream().forEach(pair -> {
 			payload.put(pair.getName(), pair.getValue());
 		});
-		if (null != payload) {
-			payload.putAll(payload);
+		if (null != body) {
+			payload.putAll(body);
 		}
 		Class<ApiFunction<?>> functionInterface = load(functionName);
 		ApiFunction<?> function = IgniteFunctionFactory.newFunction(ignite, functionInterface);
