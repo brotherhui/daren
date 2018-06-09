@@ -1,8 +1,11 @@
 package org.sanpao.flare.api.gateway;
 
+import java.util.Map;
+
 import org.sanpao.flare.common.ApiResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
+import org.springframework.http.server.reactive.ServerHttpRequest;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -21,47 +24,47 @@ public class ApiRouter {
 	private FunctionProxy functionProxy;
 
 	@GetMapping(path = "/api/{function}", produces = { MediaType.APPLICATION_STREAM_JSON_VALUE }, consumes = { MediaType.APPLICATION_JSON_VALUE })
-	public Flux<ApiResult> doGet(@PathVariable("function") String function, @RequestBody String payload) {
-		return Flux.just(functionProxy.invoke(function, payload));
+	public Flux<ApiResult> doGet(ServerHttpRequest request, @PathVariable("function") String function) {
+		return Flux.just(functionProxy.invoke(request, function));
 	}
 
 	@GetMapping(path = "/auth/api/{function}", produces = { MediaType.APPLICATION_STREAM_JSON_VALUE }, consumes = { MediaType.APPLICATION_JSON_VALUE })
-	public Flux<ApiResult> doGetWithAuth(@PathVariable("function") String function, @RequestBody String payload) {
+	public Flux<ApiResult> doGetWithAuth(ServerHttpRequest request, @PathVariable("function") String function) {
 		// 后续增加与OAuth集成
-		return doGet(function, payload);
-	}
-
-	@PostMapping(path = "/api/{function}", produces = { MediaType.APPLICATION_JSON_VALUE }, consumes = { MediaType.APPLICATION_JSON_VALUE })
-	public Mono<ApiResult> doPost(@PathVariable("function") String function, @RequestBody String payload) {
-		return Mono.just(functionProxy.invoke(function, payload));
-	}
-
-	@PostMapping(path = "/auth/api/{function}", produces = { MediaType.APPLICATION_JSON_VALUE }, consumes = { MediaType.APPLICATION_JSON_VALUE })
-	public Mono<ApiResult> doPostWithAuth(@PathVariable("function") String function, @RequestBody String payload) {
-		// 后续增加与OAuth集成
-		return doPost(function, payload);
-	}
-
-	@PutMapping(path = "/api/{function}", produces = { MediaType.APPLICATION_JSON_VALUE }, consumes = { MediaType.APPLICATION_JSON_VALUE })
-	public Mono<ApiResult> doPut(@PathVariable("function") String function, @RequestBody String payload) {
-		return Mono.just(functionProxy.invoke(function, payload));
-	}
-
-	@PutMapping(path = "/auth/api/{function}", produces = { MediaType.APPLICATION_JSON_VALUE }, consumes = { MediaType.APPLICATION_JSON_VALUE })
-	public Mono<ApiResult> doPutWithAuth(@PathVariable("function") String function, @RequestBody String payload) {
-		// 后续增加与OAuth集成
-		return doPut(function, payload);
+		return doGet(request, function);
 	}
 
 	@DeleteMapping(path = "/api/{function}", produces = { MediaType.APPLICATION_JSON_VALUE }, consumes = { MediaType.APPLICATION_JSON_VALUE })
-	public Mono<ApiResult> doDelete(@PathVariable("function") String function, @RequestBody String payload) {
-		return Mono.just(functionProxy.invoke(function, payload));
+	public Mono<ApiResult> doDelete(ServerHttpRequest request, @PathVariable("function") String function) {
+		return Mono.just(functionProxy.invoke(request, function));
 	}
 
 	@DeleteMapping(path = "/auth/api/{function}", produces = { MediaType.APPLICATION_JSON_VALUE }, consumes = { MediaType.APPLICATION_JSON_VALUE })
-	public Mono<ApiResult> doDeleteWithAuth(@PathVariable("function") String function, @RequestBody String payload) {
+	public Mono<ApiResult> doDeleteWithAuth(ServerHttpRequest request, @PathVariable("function") String function) {
 		// 后续增加与OAuth集成
-		return doDelete(function, payload);
+		return doDelete(request, function);
+	}
+
+	@PostMapping(path = "/api/{function}", produces = { MediaType.APPLICATION_JSON_VALUE }, consumes = { MediaType.APPLICATION_JSON_VALUE })
+	public Mono<ApiResult> doPost(ServerHttpRequest request, @PathVariable("function") String function, @RequestBody Map<String, Object> payload) {
+		return Mono.just(functionProxy.invoke(request, function, payload));
+	}
+
+	@PostMapping(path = "/auth/api/{function}", produces = { MediaType.APPLICATION_JSON_VALUE }, consumes = { MediaType.APPLICATION_JSON_VALUE })
+	public Mono<ApiResult> doPostWithAuth(ServerHttpRequest request, @PathVariable("function") String function, @RequestBody Map<String, Object> payload) {
+		// 后续增加与OAuth集成
+		return doPost(request, function, payload);
+	}
+
+	@PutMapping(path = "/api/{function}", produces = { MediaType.APPLICATION_JSON_VALUE }, consumes = { MediaType.APPLICATION_JSON_VALUE })
+	public Mono<ApiResult> doPut(ServerHttpRequest request, @PathVariable("function") String function, @RequestBody Map<String, Object> payload) {
+		return Mono.just(functionProxy.invoke(request, function, payload));
+	}
+
+	@PutMapping(path = "/auth/api/{function}", produces = { MediaType.APPLICATION_JSON_VALUE }, consumes = { MediaType.APPLICATION_JSON_VALUE })
+	public Mono<ApiResult> doPutWithAuth(ServerHttpRequest request, @PathVariable("function") String function, @RequestBody Map<String, Object> payload) {
+		// 后续增加与OAuth集成
+		return doPut(request, function, payload);
 	}
 
 }
