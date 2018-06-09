@@ -47,10 +47,14 @@
 
 ### 5.运行方式
 > 分别启动 flare-service-boot 和 flare-api-gateway<br>
-> 以post方式访问http://localhost:50000/query/xxx<br>
-> 以post方式访问http://localhost:50000/command/xxx<br>
-> 以post方式访问http://localhost:50000/auth/query/xxx<br>
-> 以post方式访问http://localhost:50000/auth/command/xxx<br>
+> 以get方式访问http://localhost:50000/api/{function}<br>
+> 以get方式访问http://localhost:50000/auth/api/{function}<br>
+> 以post方式访问http://localhost:50000/api/{function}<br>
+> 以post方式访问http://localhost:50000/auth/api/{function}<br>
+> 以put方式访问http://localhost:50000/api/{function}<br>
+> 以put方式访问http://localhost:50000/auth/api/{function}<br>
+> 以delete方式访问http://localhost:50000/api/{function}<br>
+> 以delete方式访问http://localhost:50000/auth/api/{function}<br>
 
 ### 6.包说明
 > flare-dependencies:所有jar依赖都定义在这个包下<br>
