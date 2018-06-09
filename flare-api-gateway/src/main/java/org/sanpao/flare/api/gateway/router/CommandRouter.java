@@ -21,9 +21,10 @@ public class CommandRouter {
 		return Mono.just(functionProxy.execute(function, payload));
 	}
 
-	@PostMapping(path = "/auth/command/{action}", produces = { MediaType.APPLICATION_JSON_VALUE }, consumes = { MediaType.APPLICATION_JSON_VALUE })
-	public Mono<String> executeWithAuth() {
-		return null;
+	@PostMapping(path = "/auth/command/{function}", produces = { MediaType.APPLICATION_JSON_VALUE }, consumes = { MediaType.APPLICATION_JSON_VALUE })
+	public Mono<ApiResult> executeWithAuth(@PathVariable("function") String function, String payload) {
+		// 后续增加与OAuth集成
+		return execute(function, payload);
 	}
 
 }
