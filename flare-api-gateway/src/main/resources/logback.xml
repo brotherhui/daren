@@ -3,7 +3,7 @@
 
 	<property resource="application.properties" />
 	<property name="LOG_PATH" value="${LOG_PATH:-${LOG_TEMP:-${java.io.tmpdir:-/tmp}}}" />
-	<property name="LOG_BASE" value="${LOG_PATH}/flare-service-gateway" />
+	<property name="LOG_BASE" value="${LOG_PATH}/flare-api-gateway" />
 
 	<appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
 		<layout class="ch.qos.logback.classic.PatternLayout">
