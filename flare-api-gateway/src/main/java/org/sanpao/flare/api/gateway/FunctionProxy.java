@@ -5,11 +5,11 @@ import java.io.InputStreamReader;
 import java.util.Map;
 import java.util.Properties;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.function.Function;
 
 import org.apache.ignite.Ignite;
-import org.sanpao.flare.common.IgniteServiceFactory;
+import org.sanpao.flare.common.ApiFunction;
 import org.sanpao.flare.common.ApiResult;
+import org.sanpao.flare.common.IgniteFunctionFactory;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -17,34 +17,34 @@ import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Component;
 
 @Component
-public class ServiceMesh implements InitializingBean {
+public class FunctionProxy implements InitializingBean {
 
 	final static Properties PROPERTIES = new Properties();
 
-	final static Map<String, Class<Function<String, ApiResult>>> CACHE = new ConcurrentHashMap<String, Class<Function<String, ApiResult>>>();
+	final static Map<String, Class<ApiFunction<?>>> CACHE = new ConcurrentHashMap<String, Class<ApiFunction<?>>>();
 
-	@Value("classpath:service-mesh.properties")
+	@Value("classpath:service-function.properties")
 	private Resource resource;
 
 	@Autowired
 	private Ignite ignite;
 
-	public ApiResult execute(String action, String payload) {
-		Class<Function<String, ApiResult>> serviceClass = load(action);
-		Function<String, ApiResult> fn = IgniteServiceFactory.newFunction(ignite, serviceClass);
+	public ApiResult execute(String function, String payload) {
+		Class<ApiFunction<?>> functionInterface = load(function);
+		ApiFunction<?> fn = IgniteFunctionFactory.newFunction(ignite, functionInterface);
 		return fn.apply(payload);
 	}
 
 	@SuppressWarnings("unchecked")
-	public Class<Function<String, ApiResult>> load(String action) {
-		Class<Function<String, ApiResult>> serviceClass = null;
-		if (CACHE.containsKey(action)) {
-			serviceClass = CACHE.get(action);
+	public Class<ApiFunction<?>> load(String function) {
+		Class<ApiFunction<?>> serviceClass = null;
+		if (CACHE.containsKey(function)) {
+			serviceClass = CACHE.get(function);
 		} else {
-			String serviceClassName = PROPERTIES.getProperty(action);
+			String serviceClassName = PROPERTIES.getProperty(function);
 			try {
-				serviceClass = (Class<Function<String, ApiResult>>) Class.forName(serviceClassName);
-				CACHE.putIfAbsent(action, serviceClass);
+				serviceClass = (Class<ApiFunction<?>>) Class.forName(serviceClassName);
+				CACHE.putIfAbsent(function, serviceClass);
 			} catch (ClassNotFoundException e) {
 				e.printStackTrace();
 			}

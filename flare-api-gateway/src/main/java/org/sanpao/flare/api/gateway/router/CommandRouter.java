@@ -1,6 +1,6 @@
 package org.sanpao.flare.api.gateway.router;
 
-import org.sanpao.flare.api.gateway.ServiceMesh;
+import org.sanpao.flare.api.gateway.FunctionProxy;
 import org.sanpao.flare.common.ApiResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
@@ -14,11 +14,11 @@ import reactor.core.publisher.Mono;
 public class CommandRouter {
 
 	@Autowired
-	private ServiceMesh serviceMesh;
+	private FunctionProxy functionProxy;
 
-	@PostMapping(path = "/command/{action}", produces = { MediaType.APPLICATION_JSON_VALUE }, consumes = { MediaType.APPLICATION_JSON_VALUE })
-	public Mono<ApiResult> execute(@PathVariable("action") String action, String payload) {
-		return Mono.just(serviceMesh.execute(action, payload));
+	@PostMapping(path = "/command/{function}", produces = { MediaType.APPLICATION_JSON_VALUE }, consumes = { MediaType.APPLICATION_JSON_VALUE })
+	public Mono<ApiResult> execute(@PathVariable("function") String function, String payload) {
+		return Mono.just(functionProxy.execute(function, payload));
 	}
 
 	@PostMapping(path = "/auth/command/{action}", produces = { MediaType.APPLICATION_JSON_VALUE }, consumes = { MediaType.APPLICATION_JSON_VALUE })

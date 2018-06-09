@@ -6,7 +6,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 @SuppressWarnings("serial")
-public class IgniteService implements Service {
+public class IgniteFunction implements Service {
 
 	protected Logger logger = LoggerFactory.getLogger(getClass());
 

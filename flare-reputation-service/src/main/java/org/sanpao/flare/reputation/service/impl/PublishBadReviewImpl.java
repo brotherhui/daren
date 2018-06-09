@@ -1,9 +1,9 @@
 package org.sanpao.flare.reputation.service.impl;
 
-import org.sanpao.flare.common.IgniteService;
+import org.sanpao.flare.common.IgniteFunction;
 import org.sanpao.flare.reputation.api.PublishBadReview;
 
-public class PublishBadReviewImpl extends IgniteService implements PublishBadReview {
+public class PublishBadReviewImpl extends IgniteFunction implements PublishBadReview {
 
 	/**
 	 * 

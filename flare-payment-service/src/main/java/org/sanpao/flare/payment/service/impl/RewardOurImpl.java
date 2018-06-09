@@ -1,9 +1,9 @@
 package org.sanpao.flare.payment.service.impl;
 
-import org.sanpao.flare.common.IgniteService;
+import org.sanpao.flare.common.IgniteFunction;
 import org.sanpao.flare.payment.api.RewardOur;
 
-public class RewardOurImpl extends IgniteService implements RewardOur {
+public class RewardOurImpl extends IgniteFunction implements RewardOur {
 
 	/**
 	 * 

@@ -1,9 +1,9 @@
 package org.sanpao.flare.identity.service.impl;
 
-import org.sanpao.flare.common.IgniteService;
+import org.sanpao.flare.common.IgniteFunction;
 import org.sanpao.flare.identity.api.BindMobilePhone;
 
-public class BindMobilePhoneImpl extends IgniteService implements BindMobilePhone {
+public class BindMobilePhoneImpl extends IgniteFunction implements BindMobilePhone {
 
 	/**
 	 * 
