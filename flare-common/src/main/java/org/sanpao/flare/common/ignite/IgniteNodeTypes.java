@@ -1,4 +1,4 @@
-package org.sanpao.flare.common;
+package org.sanpao.flare.common.ignite;
 
 public enum IgniteNodeTypes {
 

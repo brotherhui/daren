@@ -9,7 +9,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import org.apache.ignite.Ignite;
 import org.sanpao.flare.common.ApiFunction;
 import org.sanpao.flare.common.ApiResult;
-import org.sanpao.flare.common.IgniteFunctionFactory;
+import org.sanpao.flare.common.ignite.IgniteFunctionFactory;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;

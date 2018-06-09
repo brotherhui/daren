@@ -1,7 +1,7 @@
 package org.sanpao.flare.tag.service.impl;
 
 import org.sanpao.flare.common.ApiResult;
-import org.sanpao.flare.common.IgniteFunction;
+import org.sanpao.flare.common.ignite.IgniteFunction;
 import org.sanpao.flare.tag.api.MakeTag;
 
 public class MakeTagImpl extends IgniteFunction implements MakeTag {

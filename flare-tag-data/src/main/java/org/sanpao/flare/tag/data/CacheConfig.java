@@ -15,7 +15,7 @@ import org.apache.ignite.configuration.IgniteConfiguration;
 import org.apache.ignite.spi.discovery.tcp.TcpDiscoverySpi;
 import org.apache.ignite.spi.discovery.tcp.ipfinder.vm.TcpDiscoveryVmIpFinder;
 import org.apache.ignite.springdata.repository.config.EnableIgniteRepositories;
-import org.sanpao.flare.common.IgniteNodeTypes;
+import org.sanpao.flare.common.ignite.IgniteNodeTypes;
 import org.sanpao.flare.tag.data.store.TagInfoStore;
 import org.sanpao.flare.tag.domain.entity.TagInfo;
 import org.springframework.beans.factory.annotation.Value;

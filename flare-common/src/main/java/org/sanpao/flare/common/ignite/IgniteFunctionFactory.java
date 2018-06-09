@@ -1,7 +1,8 @@
-package org.sanpao.flare.common;
+package org.sanpao.flare.common.ignite;
 
 import org.apache.ignite.Ignite;
 import org.apache.ignite.cluster.ClusterGroup;
+import org.sanpao.flare.common.ApiFunction;
 
 public class IgniteFunctionFactory {
 

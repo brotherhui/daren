@@ -2,7 +2,7 @@ package org.sanpao.flare.advertisement.service.impl;
 
 import org.sanpao.flare.advertisement.api.PublishAdvertisement;
 import org.sanpao.flare.common.ApiResult;
-import org.sanpao.flare.common.IgniteFunction;
+import org.sanpao.flare.common.ignite.IgniteFunction;
 
 public class PublishAdvertisementImpl extends IgniteFunction implements PublishAdvertisement {
 

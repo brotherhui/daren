@@ -1,4 +1,4 @@
-package org.sanpao.flare.common;
+package org.sanpao.flare.common.ignite;
 
 import org.apache.ignite.services.Service;
 import org.apache.ignite.services.ServiceContext;

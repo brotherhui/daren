@@ -17,7 +17,7 @@ import org.apache.ignite.spi.discovery.tcp.ipfinder.vm.TcpDiscoveryVmIpFinder;
 import org.apache.ignite.springdata.repository.config.EnableIgniteRepositories;
 import org.sanpao.flare.advertisement.data.store.AdvertisementInfoStore;
 import org.sanpao.flare.advertisement.domain.entity.AdvertisementInfo;
-import org.sanpao.flare.common.IgniteNodeTypes;
+import org.sanpao.flare.common.ignite.IgniteNodeTypes;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

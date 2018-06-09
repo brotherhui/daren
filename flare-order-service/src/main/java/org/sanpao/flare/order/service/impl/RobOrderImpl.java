@@ -1,7 +1,7 @@
 package org.sanpao.flare.order.service.impl;
 
 import org.sanpao.flare.common.ApiResult;
-import org.sanpao.flare.common.IgniteFunction;
+import org.sanpao.flare.common.ignite.IgniteFunction;
 import org.sanpao.flare.order.api.RobOrder;
 
 public class RobOrderImpl extends IgniteFunction implements RobOrder {

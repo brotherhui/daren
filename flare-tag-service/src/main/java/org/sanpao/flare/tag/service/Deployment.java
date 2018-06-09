@@ -5,7 +5,7 @@ import javax.annotation.PostConstruct;
 import org.apache.ignite.Ignite;
 import org.apache.ignite.IgniteServices;
 import org.apache.ignite.cluster.ClusterGroup;
-import org.sanpao.flare.common.IgniteNodeTypes;
+import org.sanpao.flare.common.ignite.IgniteNodeTypes;
 import org.sanpao.flare.tag.api.MakeTag;
 import org.sanpao.flare.tag.service.impl.MakeTagImpl;
 import org.springframework.beans.factory.annotation.Autowired;

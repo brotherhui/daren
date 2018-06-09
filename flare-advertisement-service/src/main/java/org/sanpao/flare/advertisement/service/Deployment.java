@@ -7,7 +7,7 @@ import org.apache.ignite.IgniteServices;
 import org.apache.ignite.cluster.ClusterGroup;
 import org.sanpao.flare.advertisement.api.PublishAdvertisement;
 import org.sanpao.flare.advertisement.service.impl.PublishAdvertisementImpl;
-import org.sanpao.flare.common.IgniteNodeTypes;
+import org.sanpao.flare.common.ignite.IgniteNodeTypes;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;

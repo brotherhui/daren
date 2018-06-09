@@ -5,7 +5,7 @@ import javax.annotation.PostConstruct;
 import org.apache.ignite.Ignite;
 import org.apache.ignite.IgniteServices;
 import org.apache.ignite.cluster.ClusterGroup;
-import org.sanpao.flare.common.IgniteNodeTypes;
+import org.sanpao.flare.common.ignite.IgniteNodeTypes;
 import org.sanpao.flare.order.api.RobOrder;
 import org.sanpao.flare.order.service.impl.RobOrderImpl;
 import org.springframework.beans.factory.annotation.Autowired;
