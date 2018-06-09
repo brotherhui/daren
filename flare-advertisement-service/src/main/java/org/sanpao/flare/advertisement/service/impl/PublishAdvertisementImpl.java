@@ -14,7 +14,7 @@ public class PublishAdvertisementImpl extends IgniteFunction implements PublishA
 	@Override
 	public ApiResult execute(ApiPayload payload) {
 		// TODO Auto-generated method stub
-		logger.info("============>I Publish A Advertisement, Id Is {}", payload);
+		logger.info("============>I Publish A Advertisement, Id Is {}", payload.getAdvertisementId());
 		return new ApiResult(0, "msg", "{ data }");
 	}
 
