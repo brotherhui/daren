@@ -34,5 +34,10 @@
 			<artifactId>junit</artifactId>
 			<scope>test</scope>
 		</dependency>
+
+		<dependency>
+			<groupId>org.sanpao</groupId>
+			<artifactId>flare-common</artifactId>
+		</dependency>
 	</dependencies>
 </project>
