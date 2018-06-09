@@ -29,22 +29,22 @@ public class FunctionProxy implements InitializingBean {
 	@Autowired
 	private Ignite ignite;
 
-	public ApiResult execute(String function, String payload) {
-		Class<ApiFunction<?>> functionInterface = load(function);
-		ApiFunction<?> fn = IgniteFunctionFactory.newFunction(ignite, functionInterface);
-		return fn.apply(payload);
+	public ApiResult execute(String functionName, String payload) {
+		Class<ApiFunction<?>> functionInterface = load(functionName);
+		ApiFunction<?> function = IgniteFunctionFactory.newFunction(ignite, functionInterface);
+		return function.apply(payload);
 	}
 
 	@SuppressWarnings("unchecked")
-	public Class<ApiFunction<?>> load(String function) {
+	public Class<ApiFunction<?>> load(String functionName) {
 		Class<ApiFunction<?>> serviceClass = null;
-		if (CACHE.containsKey(function)) {
-			serviceClass = CACHE.get(function);
+		if (CACHE.containsKey(functionName)) {
+			serviceClass = CACHE.get(functionName);
 		} else {
-			String serviceClassName = PROPERTIES.getProperty(function);
+			String serviceClassName = PROPERTIES.getProperty(functionName);
 			try {
 				serviceClass = (Class<ApiFunction<?>>) Class.forName(serviceClassName);
-				CACHE.putIfAbsent(function, serviceClass);
+				CACHE.putIfAbsent(functionName, serviceClass);
 			} catch (ClassNotFoundException e) {
 				e.printStackTrace();
 			}
