@@ -46,25 +46,25 @@ public class ApiRouter {
 	}
 
 	@PostMapping(path = "/api/{function}", produces = { MediaType.APPLICATION_JSON_VALUE }, consumes = { MediaType.APPLICATION_JSON_VALUE })
-	public Mono<ApiResult> doPost(ServerHttpRequest request, @PathVariable("function") String function, @RequestBody Map<String, Object> payload) {
-		return Mono.just(functionProxy.invoke(request, function, payload));
+	public Mono<ApiResult> doPost(ServerHttpRequest request, @PathVariable("function") String function, @RequestBody Map<String, Object> body) {
+		return Mono.just(functionProxy.invoke(request, function, body));
 	}
 
 	@PostMapping(path = "/auth/api/{function}", produces = { MediaType.APPLICATION_JSON_VALUE }, consumes = { MediaType.APPLICATION_JSON_VALUE })
-	public Mono<ApiResult> doPostWithAuth(ServerHttpRequest request, @PathVariable("function") String function, @RequestBody Map<String, Object> payload) {
+	public Mono<ApiResult> doPostWithAuth(ServerHttpRequest request, @PathVariable("function") String function, @RequestBody Map<String, Object> body) {
 		// 后续增加与OAuth集成
-		return doPost(request, function, payload);
+		return doPost(request, function, body);
 	}
 
 	@PutMapping(path = "/api/{function}", produces = { MediaType.APPLICATION_JSON_VALUE }, consumes = { MediaType.APPLICATION_JSON_VALUE })
-	public Mono<ApiResult> doPut(ServerHttpRequest request, @PathVariable("function") String function, @RequestBody Map<String, Object> payload) {
-		return Mono.just(functionProxy.invoke(request, function, payload));
+	public Mono<ApiResult> doPut(ServerHttpRequest request, @PathVariable("function") String function, @RequestBody Map<String, Object> body) {
+		return Mono.just(functionProxy.invoke(request, function, body));
 	}
 
 	@PutMapping(path = "/auth/api/{function}", produces = { MediaType.APPLICATION_JSON_VALUE }, consumes = { MediaType.APPLICATION_JSON_VALUE })
-	public Mono<ApiResult> doPutWithAuth(ServerHttpRequest request, @PathVariable("function") String function, @RequestBody Map<String, Object> payload) {
+	public Mono<ApiResult> doPutWithAuth(ServerHttpRequest request, @PathVariable("function") String function, @RequestBody Map<String, Object> body) {
 		// 后续增加与OAuth集成
-		return doPut(request, function, payload);
+		return doPut(request, function, body);
 	}
 
 }

@@ -35,18 +35,18 @@ public class FunctionProxy implements InitializingBean {
 	@Autowired
 	private Ignite ignite;
 
-	public ApiResult invoke(ServerHttpRequest request, String functionName, Map<String, Object> payload) {
+	public ApiResult invoke(ServerHttpRequest request, String functionName, Map<String, Object> body) {
 		List<NameValuePair> nameValuePairs = URLEncodedUtils.parse(request.getURI(), Charset.forName("UTF-8"));
-		Map<String, Object> map = new HashMap<String, Object>();
+		Map<String, Object> payload = new HashMap<String, Object>();
 		nameValuePairs.stream().forEach(pair -> {
-			map.put(pair.getName(), pair.getValue());
+			payload.put(pair.getName(), pair.getValue());
 		});
 		if (null != payload) {
-			map.putAll(payload);
+			payload.putAll(payload);
 		}
 		Class<ApiFunction<?>> functionInterface = load(functionName);
 		ApiFunction<?> function = IgniteFunctionFactory.newFunction(ignite, functionInterface);
-		return function.apply(map);
+		return function.apply(payload);
 	}
 
 	public ApiResult invoke(ServerHttpRequest request, String functionName) {
