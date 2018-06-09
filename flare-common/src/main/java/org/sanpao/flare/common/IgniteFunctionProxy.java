@@ -1,4 +1,4 @@
-package org.sanpao.flare.api.gateway;
+package org.sanpao.flare.common;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -7,9 +7,6 @@ import java.util.Properties;
 import java.util.concurrent.ConcurrentHashMap;
 
 import org.apache.ignite.Ignite;
-import org.sanpao.flare.common.ApiFunction;
-import org.sanpao.flare.common.ApiResult;
-import org.sanpao.flare.common.IgniteFunctionFactory;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -17,7 +14,7 @@ import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Component;
 
 @Component
-public class FunctionProxy implements InitializingBean {
+public class IgniteFunctionProxy implements InitializingBean {
 
 	final static Properties PROPERTIES = new Properties();
 
