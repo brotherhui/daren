@@ -48,10 +48,10 @@
 ### 5.运行方式
 - 分别启动 flare-service-boot 和 flare-api-gateway
 > 无权限验证的访问方式<br>
-> 以get方式访问   http://localhost:50000/api/{function}<br>
-> 以post方式访问  http://localhost:50000/api/{function}<br>
-> 以put方式访问   http://localhost:50000/api/{function}<br>
-> 以delete方式访问http://localhost:50000/api/{function}<br>
+> http://localhost:50000/api/{function}以get方式访问<br>
+> http://localhost:50000/api/{function}以post方式访问<br>
+> http://localhost:50000/api/{function}以put方式访问<br>
+> http://localhost:50000/api/{function}以delete方式访问<br>
 > 
 > 有权限验证的访问方式<br>
 > 以get方式访问http://localhost:50000/auth/api/{function}<br>
