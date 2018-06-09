@@ -29,7 +29,7 @@ public class FunctionProxy implements InitializingBean {
 	@Autowired
 	private Ignite ignite;
 
-	public ApiResult execute(String functionName, String payload) {
+	public ApiResult invoke(String functionName, String payload) {
 		Class<ApiFunction<?>> functionInterface = load(functionName);
 		ApiFunction<?> function = IgniteFunctionFactory.newFunction(ignite, functionInterface);
 		return function.apply(payload);

@@ -22,7 +22,7 @@ public class ApiRouter {
 
 	@GetMapping(path = "/api/{function}", produces = { MediaType.APPLICATION_STREAM_JSON_VALUE }, consumes = { MediaType.APPLICATION_JSON_VALUE })
 	public Flux<ApiResult> doGet(@PathVariable("function") String function, @RequestBody String payload) {
-		return Flux.just(functionProxy.execute(function, payload));
+		return Flux.just(functionProxy.invoke(function, payload));
 	}
 
 	@GetMapping(path = "/auth/api/{function}", produces = { MediaType.APPLICATION_STREAM_JSON_VALUE }, consumes = { MediaType.APPLICATION_JSON_VALUE })
@@ -33,7 +33,7 @@ public class ApiRouter {
 
 	@PostMapping(path = "/api/{function}", produces = { MediaType.APPLICATION_JSON_VALUE }, consumes = { MediaType.APPLICATION_JSON_VALUE })
 	public Mono<ApiResult> doPost(@PathVariable("function") String function, @RequestBody String payload) {
-		return Mono.just(functionProxy.execute(function, payload));
+		return Mono.just(functionProxy.invoke(function, payload));
 	}
 
 	@PostMapping(path = "/auth/api/{function}", produces = { MediaType.APPLICATION_JSON_VALUE }, consumes = { MediaType.APPLICATION_JSON_VALUE })
@@ -44,7 +44,7 @@ public class ApiRouter {
 
 	@PutMapping(path = "/api/{function}", produces = { MediaType.APPLICATION_JSON_VALUE }, consumes = { MediaType.APPLICATION_JSON_VALUE })
 	public Mono<ApiResult> doPut(@PathVariable("function") String function, @RequestBody String payload) {
-		return Mono.just(functionProxy.execute(function, payload));
+		return Mono.just(functionProxy.invoke(function, payload));
 	}
 
 	@PutMapping(path = "/auth/api/{function}", produces = { MediaType.APPLICATION_JSON_VALUE }, consumes = { MediaType.APPLICATION_JSON_VALUE })
@@ -55,7 +55,7 @@ public class ApiRouter {
 
 	@DeleteMapping(path = "/api/{function}", produces = { MediaType.APPLICATION_JSON_VALUE }, consumes = { MediaType.APPLICATION_JSON_VALUE })
 	public Mono<ApiResult> doDelete(@PathVariable("function") String function, @RequestBody String payload) {
-		return Mono.just(functionProxy.execute(function, payload));
+		return Mono.just(functionProxy.invoke(function, payload));
 	}
 
 	@DeleteMapping(path = "/auth/api/{function}", produces = { MediaType.APPLICATION_JSON_VALUE }, consumes = { MediaType.APPLICATION_JSON_VALUE })
