@@ -46,12 +46,13 @@
 > flare-parent工程下执行 mvn clean install 或 mvn clean package
 
 ### 5.运行方式
-- 分别启动 flare-service-boot 和 flare-api-gateway<br>
+- 分别启动 flare-service-boot 和 flare-api-gateway
 > 无权限验证的访问方式<br>
 > 以get方式访问http://localhost:50000/api/{function}<br>
 > 以post方式访问http://localhost:50000/api/{function}<br>
 > 以put方式访问http://localhost:50000/api/{function}<br>
 > 以delete方式访问http://localhost:50000/api/{function}<br>
+<br>
 > 有权限验证的访问方式<br>
 > 以get方式访问http://localhost:50000/auth/api/{function}<br>
 > 以post方式访问http://localhost:50000/auth/api/{function}<br>
