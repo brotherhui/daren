@@ -11,7 +11,8 @@ public interface ApiFunction<T> extends Function<String, ApiResult> {
 
 	@SuppressWarnings("unchecked")
 	default ApiResult apply(String payload) {
-		Class<?> payloadType = GenericTypeUtils.getInterfaceGenricType(getClass());
+		Class<?> functionInterface = getClass().getInterfaces()[0];
+		Class<?> payloadType = GenericTypeUtils.getInterfaceGenricType(functionInterface);
 		T t = (T) GsonUtils.create().fromJson(payload, payloadType);
 		return execute(t);
 	}

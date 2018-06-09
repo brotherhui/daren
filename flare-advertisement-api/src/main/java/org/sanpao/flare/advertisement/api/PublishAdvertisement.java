@@ -6,7 +6,7 @@ import org.sanpao.flare.common.ApiFunction;
 public interface PublishAdvertisement extends ApiFunction<ApiPayload> {
 
 	public static class ApiPayload {
-		
+
 		private Long advertisementId;
 
 		public Long getAdvertisementId() {
@@ -16,7 +16,7 @@ public interface PublishAdvertisement extends ApiFunction<ApiPayload> {
 		public void setAdvertisementId(Long advertisementId) {
 			this.advertisementId = advertisementId;
 		}
-	
+
 	}
 
 }
