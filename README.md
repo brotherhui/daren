@@ -52,7 +52,7 @@
 > 以post方式访问http://localhost:50000/api/{function}<br>
 > 以put方式访问http://localhost:50000/api/{function}<br>
 > 以delete方式访问http://localhost:50000/api/{function}<br>
-<br>
+> 
 > 有权限验证的访问方式<br>
 > 以get方式访问http://localhost:50000/auth/api/{function}<br>
 > 以post方式访问http://localhost:50000/auth/api/{function}<br>
