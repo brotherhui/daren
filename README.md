@@ -54,6 +54,13 @@
 > http://localhost:50000/auth/api/{function}<br>
 
 ### 6.包说明
-> flare-dependencies:所有jar依赖都定义在这个包下<br>
-> flare-common:包存放整个后端服务所使用到的通用类，例如抽象服务接口、消息模型、接口返回结果等<br>
-> flare-util:封装后端服务所使用到的工具类<br>
+- flare-parent
+> 所有工程的父工程<br>
+- flare-dependencies
+> 所有jar依赖都定义在这个包下<br>
+- flare-common
+> 包存放整个后端服务所使用到的通用类，例如抽象服务接口、消息模型、接口返回结果等<br>
+- flare-util
+> 封装后端服务所使用到的工具类<br>
+- flare-domain
+> 封装实体的抽象基类<br>
