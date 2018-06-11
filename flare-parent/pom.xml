@@ -31,14 +31,14 @@
 		<module>../flare-payment-data</module>
 		<module>../flare-payment-domain</module>
 		<module>../flare-payment-service</module>
+		<module>../flare-rack-api</module>
+		<module>../flare-rack-data</module>
+		<module>../flare-rack-domain</module>
+		<module>../flare-rack-service</module>
 		<module>../flare-reputation-api</module>
 		<module>../flare-reputation-data</module>
 		<module>../flare-reputation-domain</module>
 		<module>../flare-reputation-service</module>
-		<module>../flare-shelf-api</module>
-		<module>../flare-shelf-data</module>
-		<module>../flare-shelf-domain</module>
-		<module>../flare-shelf-service</module>
 		<module>../flare-tag-api</module>
 		<module>../flare-tag-data</module>
 		<module>../flare-tag-domain</module>

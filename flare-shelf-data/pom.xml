@@ -3,11 +3,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>org.sanpao</groupId>
-	<artifactId>flare-shelf-data</artifactId>
+	<artifactId>flare-rack-data</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>flare-shelf-data</name>
+	<name>flare-rack-data</name>
 	<url>http://maven.apache.org</url>
 
 	<dependencyManagement>
@@ -31,7 +31,7 @@
 
 		<dependency>
 			<groupId>org.sanpao</groupId>
-			<artifactId>flare-advertisement-domain</artifactId>
+			<artifactId>flare-rack-domain</artifactId>
 		</dependency>
 	</dependencies>
 </project>

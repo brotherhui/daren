@@ -132,6 +132,27 @@
 
 			<dependency>
 				<groupId>org.sanpao</groupId>
+				<artifactId>flare-rack-data</artifactId>
+				<version>${flare.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.sanpao</groupId>
+				<artifactId>flare-rack-domain</artifactId>
+				<version>${flare.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.sanpao</groupId>
+				<artifactId>flare-rack-api</artifactId>
+				<version>${flare.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.sanpao</groupId>
+				<artifactId>flare-rack-service</artifactId>
+				<version>${flare.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.sanpao</groupId>
 				<artifactId>flare-reputation-data</artifactId>
 				<version>${flare.version}</version>
 			</dependency>
@@ -148,27 +169,6 @@
 			<dependency>
 				<groupId>org.sanpao</groupId>
 				<artifactId>flare-reputation-service</artifactId>
-				<version>${flare.version}</version>
-			</dependency>
-
-			<dependency>
-				<groupId>org.sanpao</groupId>
-				<artifactId>flare-shelf-data</artifactId>
-				<version>${flare.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.sanpao</groupId>
-				<artifactId>flare-shelf-domain</artifactId>
-				<version>${flare.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.sanpao</groupId>
-				<artifactId>flare-shelf-api</artifactId>
-				<version>${flare.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.sanpao</groupId>
-				<artifactId>flare-shelf-service</artifactId>
 				<version>${flare.version}</version>
 			</dependency>
 

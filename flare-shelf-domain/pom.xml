@@ -3,9 +3,12 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>org.sanpao</groupId>
-	<artifactId>flare-shelf-domain</artifactId>
+	<artifactId>flare-rack-domain</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
+
+	<name>flare-rack-domain</name>
+	<url>http://maven.apache.org</url>
 
 	<dependencyManagement>
 		<dependencies>

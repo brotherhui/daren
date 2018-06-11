@@ -41,12 +41,16 @@ public class Config {
 	private List<CacheConfiguration<?, ?>> paymentCacheConfigurations;
 
 	@Autowired
-	@Qualifier("tagCacheConfigurations")
-	private List<CacheConfiguration<?, ?>> tagCacheConfigurations;
+	@Qualifier("rackCacheConfigurations")
+	private List<CacheConfiguration<?, ?>> rackCacheConfigurations;
 
 	@Autowired
 	@Qualifier("reputationCacheConfigurations")
 	private List<CacheConfiguration<?, ?>> reputationCacheConfigurations;
+
+	@Autowired
+	@Qualifier("tagCacheConfigurations")
+	private List<CacheConfiguration<?, ?>> tagCacheConfigurations;
 
 	@Bean
 	public Ignite igniteInstance() {
@@ -67,8 +71,9 @@ public class Config {
 		cacheConfigurations.addAll(identityCacheConfigurations);
 		cacheConfigurations.addAll(orderCacheConfigurations);
 		cacheConfigurations.addAll(paymentCacheConfigurations);
-		cacheConfigurations.addAll(tagCacheConfigurations);
+		cacheConfigurations.addAll(rackCacheConfigurations);
 		cacheConfigurations.addAll(reputationCacheConfigurations);
+		cacheConfigurations.addAll(tagCacheConfigurations);
 		configuration.setCacheConfiguration(cacheConfigurations.toArray(new CacheConfiguration[] {}));
 		Ignite ignite = Ignition.getOrStart(configuration);
 		return ignite;
