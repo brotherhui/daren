@@ -153,6 +153,27 @@
 
 			<dependency>
 				<groupId>org.sanpao</groupId>
+				<artifactId>flare-shelf-data</artifactId>
+				<version>${flare.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.sanpao</groupId>
+				<artifactId>flare-shelf-domain</artifactId>
+				<version>${flare.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.sanpao</groupId>
+				<artifactId>flare-shelf-api</artifactId>
+				<version>${flare.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.sanpao</groupId>
+				<artifactId>flare-shelf-service</artifactId>
+				<version>${flare.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.sanpao</groupId>
 				<artifactId>flare-tag-data</artifactId>
 				<version>${flare.version}</version>
 			</dependency>
